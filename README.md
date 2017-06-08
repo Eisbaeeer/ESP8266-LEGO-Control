@@ -11,10 +11,6 @@ Please have a look into the ino file for pinout to the driver modules.
 Creative Commons - Attribution - Non-Commercial
 http://creativecommons.org/licenses/by-nc/3.0/
 
-LICENSE
-http://creativecommons.org/licenses/by-nc/3.0/
-licensed under the Creative Commons - Attribution - Non-Commercial license
-
 ## ChangeLog
 
 ### 0.3
