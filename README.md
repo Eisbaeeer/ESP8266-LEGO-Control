@@ -11,11 +11,18 @@ Please have a look into the ino file for pinout to the driver modules.
 Creative Commons - Attribution - Non-Commercial
 http://creativecommons.org/licenses/by-nc/3.0/
 
+LICENSE
+http://creativecommons.org/licenses/by-nc/3.0/
+licensed under the Creative Commons - Attribution - Non-Commercial license
+
 ## ChangeLog
 
-### 0.0.20
+### 0.3
+* (Eisbaeeer) bugfix D-Pad direction
+
+### 0.2
 * (Eisbaeeer) adding control pad
 
-### 0.0.10
+### 0.1
 * (Eisbaeeer) initial version
 

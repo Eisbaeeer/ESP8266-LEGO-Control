@@ -6,12 +6,18 @@ Used parts:
 - Motor driver ULN2003
 
 Author: Eisbaeeer
+License: http://creativecommons.org/licenses/by-nc/3.0/
+licensed under the Creative Commons - Attribution - Non-Commercial license
+
 Version:
 0.2 
 - This is the initial version of LEGO controller
 
 0.3 
 - Adding D-Pad (directional pad) for vehicles
+
+0.3 2017-06-08
+- Bugfix: D-Pad
 
 ###################################################
 Source of project:
@@ -362,53 +368,53 @@ void loop()
         Serial.println("motor2 turn left with speed: 100%");
       }
 
-      // control pad
+      // D-Pad
       else if(sCmd.indexOf("NORDWEST_FFWD")>=0)
       {
         motor1 = 80;
-        motor2 = 100;
+        motor2 = -100;
         Serial.println("NWFFWD");
       }
       else if(sCmd.indexOf("NORD_FFWD")>=0)
       {
         motor1 = 100;
-        motor2 = 100;
+        motor2 = -100;
         Serial.println("NFFWD");
       }
       else if(sCmd.indexOf("NORDOST_FFWD")>=0)
       {
         motor1 = 100;
-        motor2 = 80;
+        motor2 = -80;
         Serial.println("NOFFWD");
       }
       else if(sCmd.indexOf("NORDWEST_FWD")>=0)
       {
         motor1 = 40;
-        motor2 = 80;
+        motor2 = -80;
         Serial.println("NORDWEST_FWD");
       }
       else if(sCmd.indexOf("NORD_FWD")>=0)
       {
         motor1 = 40;
-        motor2 = 40;
+        motor2 = -40;
         Serial.println("NFWD");
       }
       else if(sCmd.indexOf("NORDOST_FWD")>=0)
       {
         motor1 = 80;
-        motor2 = 40;
+        motor2 = -40;
         Serial.println("NOFWD");
       }
       else if(sCmd.indexOf("WEST_FFWD")>=0)
       {
         motor1 = 0;
-        motor2 = 100;
+        motor2 = -100;
         Serial.println("WFFWD");
       }
       else if(sCmd.indexOf("WEST_FWD")>=0)
       {
         motor1 = 0;
-        motor2 = 40;
+        motor2 = -40;
         Serial.println("WFWD");
       }
       else if(sCmd.indexOf("STOP")>=0)
@@ -432,43 +438,43 @@ void loop()
       else if(sCmd.indexOf("SUEDWEST_BAC")>=0)
       {
         motor1 = -40;
-        motor2 = -80;
+        motor2 = 80;
         Serial.println("SWBAC");
       }
       else if(sCmd.indexOf("SUED_BAC")>=0)
       {
         motor1 = -40;
-        motor2 = -40;
+        motor2 = 40;
         Serial.println("SBAC");
       }
       else if(sCmd.indexOf("SUEDOST_BAC")>=0)
       {
         motor1 = -80;
-        motor2 = -40;
+        motor2 = 40;
         Serial.println("SOBAC");
       }
       else if(sCmd.indexOf("SUEDWEST_BAC")>=0)
       {
         motor1 = -80;
-        motor2 = -100;
+        motor2 = 100;
         Serial.println("SWBAC");
       }
       else if(sCmd.indexOf("SUED_FBAC")>=0)
       {
         motor1 = -100;
-        motor2 = -100;
+        motor2 = 100;
         Serial.println("SFBAC");
       }
       else if(sCmd.indexOf("SUEDOST_FBAC")>=0)
       {
         motor1 = -100;
-        motor2 = -80;
+        motor2 = 80;
         Serial.println("SOFBAC");
       }
       else if(sCmd.indexOf("SUEDWEST_FBAC")>=0)
       {
         motor1 = -80;
-        motor2 = -100;
+        motor2 = 100;
         Serial.println("SWFBAC");
       }
     }
